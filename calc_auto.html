@@ -15,57 +15,31 @@
         <li class="ub-grid grid-line">
             <div class="ub-grid grid-column">
                 <p class="badge badge-warning">Объем двигателя, см3</p>
-                <input type="number" name="quant" class="form-control mtr" id="weight" value="1" />
-
-
+                <input type="number" name="quant" class="form-control mtr" id="v" value="1" />
 
                 <p class="badge badge-warning">Мощность, л.с.</p>
-                <select type="select" id="vol" name="quant2" class="form-control mtr" />
-                <option value="86">86 л.с.</option>
-                <option value="123">123 л.с.</option>
-                <option value="170">170 л.с.</option>
-                <option value="177">177 л.с.</option>
-                <option value="200">200 л.с.</option>
-                <option value="250">250 л.с.</option>
-                <option value="288">288 л.с.</option>
-                <option value="249">249 л.с.</option>
-                <option value="330">330 л.с.</option>
-
+                <select id="n" name="quant2" class="form-control mtr">
+                    <option value="86">86 л.с.</option>
+                    <option value="123">123 л.с.</option>
+                    <option value="170">170 л.с.</option>
+                    <option value="177">177 л.с.</option>
+                    <option value="200">200 л.с.</option>
+                    <option value="250">250 л.с.</option>
+                    <option value="288">288 л.с.</option>
+                    <option value="249">249 л.с.</option>
+                    <option value="330">330 л.с.</option>
                 </select>
+
                 <p class="badge badge-warning">Марка машины</p>
-                <select type="select" id="voll" name="quant2" class="form-control mtr" />
-                <option value="200000">BMW</option>
-                <option value="300000">Citroën</option>
-                <option value="50000">Daewoo</option>
-                <option value="75000">Ford</option>
-                <option value="100000">Hyundai</option>
+                <select id="auto" name="quant2" class="form-control mtr">
+                    <option value="bmw">BMW</option>
+                    <option value="ford">Ford</option>
                 </select>
-
-                <p class="badge badge-warning">Тип топлива</p>
-                <div class="field-radio-group">
-                    <div class="field-body">
-                        <label class="custom-control-label radioo" for="load1"> <input type="radio" id="load1"
-                                name="quant11" class="custom-control-input mtr radio" value="0">
-                            <span> бензин (включая гибрид)</span></label>
-                    </div>
-
-                    <div class="field-body">
-                        <label class="custom-control-label radioo" for="del1"> <input type="radio" id="del1"
-                                name="quant11" class="mtr custom-control-input radio" value="0" checked="checked"><span>
-                                дизельное топливо</span></label>
-                    </div>
-
-                    <div class="field-body">
-                        <label class="custom-control-label radioo" for="frag1"> <input type="radio" id="frag1"
-                                name="quant11" class="custom-control-input radio"><span>
-                                электрический</span> </label>
-                    </div>
-                </div>
             </div>
 
             <div class="ub-grid grid-column">
                 <p class="badge badge-warning">Возраст автомобиля, лет</p>
-                <input type="number" name="quant" class="form-control mtr" id="length" value="2" />
+                <input type="number" name="quant" class="form-control mtr" id="age" value="2" />
 
                 <p class="badge badge-warning">Получатель</p>
                 <div class="field-radio-group">
@@ -80,21 +54,16 @@
                             <span>Юридическое лицо</span> </label>
                     </div>
                 </div>
+            </div>
 
-                <p class="badge badge-warning">Дополнения</p>
-                <div class="field-radio-group">
-                    <div class="field-body">
-                        <label class="custom-control-label radioo" for="load"><input type="radio" id="load" name="quant"
-                                class="custom-control-input mtr" />
-                            <span>С прицепом</span></label>
-                    </div>
-
-                    <div class="field-body">
-                        <label class="custom-control-label radioo" for="del"><input type="radio" id="del" name="quant"
-                                class="mtr custom-control-input" />
-                            <span>Без прицепа</span></label>
-                    </div>
+            <p class="badge badge-warning">Дополнения</p>
+            <div class="field-radio-group">
+                <div class="field-body">
+                    <label class="custom-control-label" for="load">
+                        <input type="checkbox" id="load" name="quant" class="custom-control-input mtr" />
+                        <span>С прицепом</span></label>
                 </div>
+            </div>
 
         <li class="ub-grid grid-line">
             <div class="row12">
@@ -108,6 +77,7 @@
         </li>
     </ul>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./calc_auto.js"></script>
 </body>
 
