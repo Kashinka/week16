@@ -35,20 +35,8 @@ li.ub-grid.grid-line {
     color: #212121;
 }
 
-input#v,
-input#n {
+input#v, input#n, input#age {
     width: 94%;
-    border-radius: 6px;
-    font-size: 14px;
-    padding: 8px 12px;
-    background: #fff;
-    border: 2px solid #ffc107;
-    color: #212121;
-}
-
-select#steny,
-select#perekrytie {
-    width: 99%;
     border-radius: 6px;
     font-size: 14px;
     padding: 8px 12px;
