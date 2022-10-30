@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    var btn = document.querySelector('#btn'),
+    let btn = document.querySelector('#btn'),
         out = document.querySelector('#out'),
         weight =document.querySelector('#weight'),
         vol = document.querySelector('#vol'),
@@ -21,7 +21,7 @@ $( document ).ready(function() {
     $('.minpl,.custom-control-input,.custom-range,.form-control,.form-control').click(function() {
     /*Находим input*/
     $input = $(this).parent().find('.mtr');
-    var qty = Number($input.val());
+    let qty = Number($input.val());
     /*Передаем функции подсчета, обновления*/
     if (isNaN(qty)) qty = 0;
     /*
@@ -34,7 +34,7 @@ $( document ).ready(function() {
     } else {
         qty -= $input.data('step');
     }
-        var min = $input.data('min');
+        let min = $input.data('min');
         if (qty >= min)  {
             $input.val(qty).trigger('input');
         } else {
@@ -99,7 +99,7 @@ $( document ).ready(function() {
         p2.value = 0;
         }
     
-    var sum = ((((Number(weight.value) * Number(length.value))+(((2 * Number(weight.value))+(2 * Number(length.value))) * Number(vol.value))) *
+    let sum = ((((Number(weight.value) * Number(length.value))+(((2 * Number(weight.value))+(2 * Number(length.value))) * Number(vol.value))) *
     Number(voll.value) +
     Number(load.value) + Number(del.value) + Number(frag.value) + Number(fragg.value) + 
     Number(load1.value) + Number(del1.value) + Number(frag1.value) + Number(p1.value) + Number(p2.value);
