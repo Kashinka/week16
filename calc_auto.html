@@ -17,23 +17,25 @@
                 <p class="badge badge-warning">Объем двигателя, см3</p>
                 <input type="number" name="quant" class="form-control mtr" id="v" value="1" />
 
-                <p class="badge badge-warning">Мощность, л.с.</p>
-                <select id="n" name="quant2" class="form-control mtr">
-                    <option value="86">86 л.с.</option>
-                    <option value="123">123 л.с.</option>
-                    <option value="170">170 л.с.</option>
-                    <option value="177">177 л.с.</option>
-                    <option value="200">200 л.с.</option>
-                    <option value="250">250 л.с.</option>
-                    <option value="288">288 л.с.</option>
-                    <option value="249">249 л.с.</option>
-                    <option value="330">330 л.с.</option>
-                </select>
 
+
+                <p class="badge badge-warning">Мощность, л.с.</p>
+                <select type="select" id="n" name="quant2" class="form-control mtr" />
+                <option value="86">86 л.с.</option>
+                <option value="123">123 л.с.</option>
+                <option value="170">170 л.с.</option>
+                <option value="177">177 л.с.</option>
+                <option value="200">200 л.с.</option>
+                <option value="250">250 л.с.</option>
+                <option value="288">288 л.с.</option>
+                <option value="249">249 л.с.</option>
+                <option value="330">330 л.с.</option>
+
+                </select>
                 <p class="badge badge-warning">Марка машины</p>
-                <select id="auto" name="quant2" class="form-control mtr">
-                    <option value="bmw">BMW</option>
-                    <option value="ford">Ford</option>
+                <select type="select" id="auto" name="quant2" class="form-control mtr" />
+                <option value="bmw">BMW</option>
+                <option value="ford">Ford</option>
                 </select>
             </div>
 
@@ -44,26 +46,25 @@
                 <p class="badge badge-warning">Получатель</p>
                 <div class="field-radio-group">
                     <div class="field-body">
-                        <label class="custom-control-label radioo" for="p1"> <input type="radio" id="p1" name="quant31"
+                        <label class="custom-control-label radioo" for="result1"> <input type="radio" id="result1" name="quant31"
                                 class="mtr custom-control-input" checked="checked">
                             <span>Физическое лицо</span></label>
                     </div>
                     <div class="field-body">
-                        <label class="custom-control-label radioo" for="p2"> <input type="radio" id="p2" name="quant31"
+                        <label class="custom-control-label radioo" for="result2"> <input type="radio" id="result2" name="quant31"
                                 class="custom-control-input">
                             <span>Юридическое лицо</span> </label>
                     </div>
                 </div>
-            </div>
 
-            <p class="badge badge-warning">Дополнения</p>
-            <div class="field-radio-group">
-                <div class="field-body">
-                    <label class="custom-control-label" for="load">
-                        <input type="checkbox" id="load" name="quant" class="custom-control-input mtr" />
-                        <span>С прицепом</span></label>
+                <p class="badge badge-warning">Дополнения</p>
+                <div class="field-radio-group">
+                    <div class="field-body">
+                        <label class="custom-control-label" for="load">
+                            <input type="checkbox" id="load" name="quant" class="custom-control-input mtr" />
+                            <span>С прицепом</span></label>
+                    </div>
                 </div>
-            </div>
 
         <li class="ub-grid grid-line">
             <div class="row12">
@@ -77,7 +78,6 @@
         </li>
     </ul>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./calc_auto.js"></script>
 </body>
 

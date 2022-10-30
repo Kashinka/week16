@@ -1,28 +1,43 @@
-$( document ).ready(function(){
+document.addEventListener("DOMContentLoaded", function(){
 
-    $('.form-control').change(onChangeParameter);
+    let controls = document.getElementsByClassName('form-control');
 
-    $('.custom-control-input').change(onChangeParameter);
+    for (let i = 0; i < controls.length; i++) {
 
+        controls[i].onchange = onChangeParameter;
+
+    }
+
+    controls = document.getElementsByClassName('custom-control-input');
+
+    for (let i = 0; i < controls.length; i++) {
+
+        controls[i].onchange = onChangeParameter;
+
+    }
 });
 
 function onChangeParameter() {
 
-    let dv = Number($('#v').val());
 
-    let age = Number($('#age').val());
+    document.getElementById('v').value;
 
-    let power = Number($('#n').val());
+    let dv = Number(document.getElementById('v').value);
 
-    let brand = $('#auto').val();
+    let age = Number(document.getElementById('age').value);
+
+    let power = Number(document.getElementById('n').value);
+
+    let brand = document.getElementById('auto').value;
     
     let face = '';
 
-    if ($('#p1').prop('checked')) {
+    
+    if (document.getElementById('result1').checked) {
 
         face = 'fl';
 
-    } else if ($('#p2').prop('checked')) {
+    } else if (document.getElementById('result2').checked) {
 
         face = 'ul';
 
@@ -30,7 +45,7 @@ function onChangeParameter() {
     
     let prizep = false;
 
-    if ($('#load').prop('checked')) {
+    if (document.getElementById('load').checked) {
 
         prizep = true;
 
@@ -73,5 +88,6 @@ function onChangeParameter() {
 
     }
 
-    $('#out').html(sum);
+    document.getElementById('out').innerHTML = JSON.stringify(sum);
+
 }
