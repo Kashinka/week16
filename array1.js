@@ -1,31 +1,43 @@
 let elements = [];
 
-$(document).ready(    
-    function(){
-        $('#submit').click(
-            function() {
-                let x = Number($('#x').val());
-                let y = Number($('#y').val());
-                let z = Number($('#z').val());
+document.addEventListener("DOMContentLoaded", function(){
 
-                elements.push(x);
-                elements.push(y);
-                elements.push(z);
+    document.getElementById('submit').onclick = function() {
+            
+            let x = Number(document.getElementById('x').value);
 
-                let h = elements.sort(
-                    function(a, b) {
-                        return a - b;
-                    }
-                );
+            let y = Number(document.getElementById('y').value);
 
-                let sum = Number(0);
-                for (let i=0;i<elements.length;i++) {
-                    sum+=elements[i];
+            let z = Number(document.getElementById('z').value);
+
+            elements.push(x);
+
+            elements.push(y);
+
+            elements.push(z);
+
+            let h = elements.sort(
+
+                function(a, b) {
+
+                    return a - b;
+
                 }
 
-                $('#elements').html(JSON.stringify(elements));
-                $('#sum').html(sum);
+            );
+
+            let sum = Number(0);
+
+            for (let i=0;i<elements.length;i++) {
+
+                sum += elements[i];
+
             }
-        );
-    }
-);
+
+            document.getElementById('elements').innerHTML = JSON.stringify(elements);
+
+            document.getElementById('sum').innerHTML = JSON.stringify(sum);
+            
+        };
+
+});

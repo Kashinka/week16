@@ -35,10 +35,8 @@ li.ub-grid.grid-line {
     color: #212121;
 }
 
-input#weight,
-input#length,
-select#krov,
-select#krov2 {
+input#v,
+input#n {
     width: 94%;
     border-radius: 6px;
     font-size: 14px;
